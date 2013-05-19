@@ -1,6 +1,6 @@
 /*
- * grunt-cortex-builder
- * https://github.com/kaelzhang/grunt-cortex-builder
+ * grunt-cortex-build
+ * https://github.com/kaelzhang/grunt-cortex-build
  *
  * Copyright (c) 2013 Kael
  * Licensed under the MIT license.
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
         },
 
         // Configuration to be run (and then tested).
-        cortex_builder: {
+        cortex_build: {
             normal: {
                 options: {
                 },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'cortex_builder', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'cortex_build', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);

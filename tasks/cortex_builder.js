@@ -1,6 +1,6 @@
 /*
- * grunt-cortex-builder
- * https://github.com/kaelzhang/grunt-cortex-builder
+ * grunt-cortex-build
+ * https://github.com/kaelzhang/grunt-cortex-build
  *
  * Copyright (c) 2013 Kael
  * Licensed under the MIT license.
@@ -8,12 +8,36 @@
 
 'use strict';
 
+
+/**
+
+design
+
+.cortex/
+    static_modules
+    local_modules
+
+    cortex_modules/
+
+    cortex_built_modules/
+
+        <module>/
+            <exact-version>/
+                // move build/ folder here
+
+*/
+
+
+var USER_HOME = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+var 
+
+
 module.exports = function(grunt) {
 
     // Please see the Grunt documentation for more information regarding task
     // creation: http://gruntjs.com/creating-tasks
 
-    grunt.registerMultiTask('cortex_builder', 'Your task description goes here.', function() {
+    grunt.registerMultiTask('cortex_build', 'Your task description goes here.', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
             punctuation: '.',
